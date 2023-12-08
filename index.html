@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>naruto</title>
+</head>
+<body>
+    <div class="container">
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <div class="card">
+            <div class="details">
+                <label for="">Enter your Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+             <div class="image">
+                <img src="naruto.jpg" alt="" class="myimage"> 
+            </div>  
+            <button>Click Me</button>        
+            </div>
+    </div>
+    <script>
+        const click = document.querySelector('button');
+        click.addEventListener('click', () => {
+            const name =document.querySelector('#name');
+            alert(`your name is ${name.value}`);
+            document.querySelector('.myimage').src= `https://joesch.moe/api/v1/${name.value}`
+        })
+    </script>
+</body>
+</html>
